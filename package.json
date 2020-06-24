@@ -1,0 +1,11 @@
+{
+  "name": "prueba",
+  "version": "1.0.0",
+  "description": "prueba node",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Matteo",
+  "license": "ISC"
+}

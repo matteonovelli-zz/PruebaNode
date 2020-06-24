@@ -1,8 +1,10 @@
 {
   "name": "prueba",
   "version": "1.0.0",
-  "description": "prueba node",  "scripts": {
-    "test": "test",
+  "type": "module",
+  "description": "prueba node",
+  "scripts": {
+    "test": "jest",
     "serve": "node --experimental-modules index.mjs"
   },
   "author": "Matteo",
@@ -13,11 +15,19 @@
     "mongoose": "^5.9.20"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.10.3",
+    "@shelf/jest-mongodb": "^1.1.5",
+    "@types/jest": "^26.0.2",
+    "babel-jest": "^26.1.0",
     "eslint": "^7.3.1",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jest": "^23.17.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1"
+  },
+  "peerDependencies": {
+    "mongodb": "4.2.8"
   }
 }

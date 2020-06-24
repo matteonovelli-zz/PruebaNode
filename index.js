@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import server from './server';
+import server from './server.js';
 // mongoose.Promise = global.Promise;
 
 const port = 3000;

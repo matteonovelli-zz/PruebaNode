@@ -6,7 +6,11 @@ const port = 3000;
 
 console.log('Conectando a la base de datos...');
 const connect = async () => {
-  await mongoose.connect(`mongodb://${dbUrl}`);
+  await mongoose.connect(`mongodb://${dbUrl}`, {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true
+  });
   console.log(`Conexión a la base de datos ${dbUrl} establecida...`);
   console.log('Iniciando servidor express...');
   await server.listen(port);

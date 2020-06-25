@@ -1,4 +1,4 @@
-import Movie from './movie.js';
+import Movie from './movie.model.js';
 
 const movieController = {};
 
@@ -11,10 +11,23 @@ movieController.create = async (req, res) => {
   }
 };
 
-movieController.retrieve = async (req, res) => {
+movieController.find = async (req, res) => {
   try {
     const movies = await Movie.find(req.body);
     res.json(movies);
+  } catch {
+    res.status(500).send('Server Error');
+  }
+};
+
+movieController.getById = async (req, res) => {
+  try {
+    const movie = await Movie.findById(req.params.id);
+    if (movie) {
+      res.json(movie);
+    } else {
+      res.status(404).send('Movie not found');
+    }
   } catch {
     res.status(500).send('Server Error');
   }

@@ -5,7 +5,10 @@
   "description": "prueba node",
   "scripts": {
     "test": "jest",
-    "serve": "node index.js"
+    "watch": "jest --watch",
+    "coverage": "jest --coverage true",
+    "serve": "node index.js",
+    "debug": "node --nolazy --inspect-brk=9229 index.js"
   },
   "author": "Matteo",
   "license": "ISC",

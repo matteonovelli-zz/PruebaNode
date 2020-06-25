@@ -35,7 +35,7 @@ describe('Movies Test', () => {
     await movieController.retrieve({ body: { title: 'Back to the future' } }, res);
     expect(res.json).toBeCalledTimes(1);
     const movies = res.json.mock.calls[0][0];
-    expect(movies[0].title).toBe('Back to the future');
+    expect(movies[0]._id).toEqual(createdMovieId);
   });
 
   test('Update a movie', async () => {
@@ -43,12 +43,17 @@ describe('Movies Test', () => {
     await movieController.update({ params: { id: createdMovieId }, body: { ...testData, year: 1986 } }, res);
     expect(res.json).toBeCalledTimes(1);
     const movie = res.json.mock.calls[0][0];
-    expect(movie.title).toBe('Back to the future');
+    expect(movie._id).toEqual(createdMovieId);
     expect(movie.year).toBe(1986);
   });
 
   test('Delete a movie', async () => {
-
+    const res = mockResponse();
+    await movieController.delete({ params: { id: createdMovieId } }, res);
+    expect(res.send).toBeCalledTimes(1);
+    expect(res.send).toBeCalledWith();
+    expect(res.status).toBeCalledTimes(1);
+    expect(res.status).toBeCalledWith(204);
   });
 
   afterAll(async () => {

@@ -32,8 +32,8 @@ movieController.update = async (req, res) => {
 
 movieController.delete = async (req, res) => {
   try {
-    await Movie.findByIdAndDelete(req.params.id, req.body);
-    res.status(204);
+    await Movie.findByIdAndDelete(req.params.id);
+    res.status(204).send();
   } catch {
     res.status(500).send('Server Error');
   }

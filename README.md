@@ -1,7 +1,7 @@
 ### Iniciar servidor
 npm run serve
 
-Variables de entorno: PORT y DB_URL
+Variables de entorno: PORT, DB_URL y JWT_KEY
 
 ### Depuración
 npm run debug

@@ -1,15 +1,8 @@
 import mongoose from 'mongoose';
 import movieController from './movie.controller';
+import mockResponse from '../utils/mockResponse'
 
 const testData = { title: 'Back to the future', year: 1985, director: 'Robert Zemeckis' };
-
-const mockResponse = () => {
-  const res = {}
-  res.json = jest.fn().mockReturnValue(res);
-  res.send = jest.fn().mockReturnValue(res);
-  res.status = jest.fn().mockReturnValue(res);
-  return res
-};
 
 describe('Movies Test', () => {
   let createdMovieId;

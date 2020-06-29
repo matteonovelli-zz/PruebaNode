@@ -1,10 +1,10 @@
-### Iniciar servidor
-npm run serve
-
-Variables de entorno: 
+### Variables de entorno: 
 * PORT: puerto donde va a escuchar el servidor express 
 * DB_URL: url de la base de datos mongodb 
 * JWT_KEY: key utilizada para firmar los tokens jwt
+
+### Iniciar servidor
+npm run serve
 
 ### Depuración
 npm run debug

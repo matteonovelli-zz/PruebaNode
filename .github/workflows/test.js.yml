@@ -28,3 +28,9 @@ jobs:
     - run: npm test
     - run: npm run coverage
     - run: npm run badges
+    - name: Push changes
+      if: steps.git-check.outputs.modified == 'true'
+      run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git commit -am "Automated changes"
+          git push

@@ -1,4 +1,4 @@
-![CI Test](https://github.com/matteonovelli/PruebaNode/workflows/CI%20Test/badge.svg) 
+![CI Test](https://github.com/matteonovelli/PruebaNode/workflows/CI%20Test/badge.svg) ![Lines](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg "Make me better!")
 
 ### Iniciar servidor
 npm run serve

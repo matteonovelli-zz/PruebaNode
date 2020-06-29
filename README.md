@@ -1,3 +1,5 @@
+![Node.js CI](https://github.com/matteonovelli/PruebaNode/workflows/Node.js%20CI/badge.svg)
+
 ### Variables de entorno: 
 * PORT: puerto donde va a escuchar el servidor express 
 * DB_URL: url de la base de datos mongodb 
